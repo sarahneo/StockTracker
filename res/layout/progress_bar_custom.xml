@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lin_progress_bar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@color/dark_gray"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:visibility="gone" >
+
+    <ProgressBar
+        style="@style/ProgressBarStyle"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/current_price_updating"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</LinearLayout>

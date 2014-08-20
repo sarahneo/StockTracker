@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10.0dip" >
+   
+    <RadioGroup 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:orientation="horizontal">
+	    <org.holoeverywhere.widget.RadioButton android:id="@+id/radio_deposit"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:checked="true"
+	        android:text="@string/switch_off"/>
+	    <org.holoeverywhere.widget.RadioButton android:id="@+id/radio_withdraw"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/switch_on"/>
+	</RadioGroup>
+    
+    <EditText
+        android:id="@+id/et_enter_cash_amount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/enter_cash_amount"
+        android:imeOptions="flagNoExtractUi"
+        android:focusable="false"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <EditText
+        android:id="@+id/et_date_of_txn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/enter_date_of_txn"
+        android:imeOptions="flagNoExtractUi"
+        android:focusable="false" 
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+    
+    <Spinner
+        android:id="@+id/sp_portfolio_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp"/>
+        
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="com.handyapps.stocktracker.widget.WidgetConfigPrefsActivityPortfolioNoHc"
+    android:initialLayout="@layout/widget_portfolio_no_hc"
+    android:minHeight="260dp"
+    android:minResizeHeight="125dp"
+    android:minResizeWidth="100dp"
+    android:minWidth="260dp"
+    android:previewImage="@drawable/ic_widget_portfolio"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="86400000"
+    android:widgetCategory="home_screen|keyguard" >
+
+</appwidget-provider>

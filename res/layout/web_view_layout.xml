@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <include
+        android:layout_width="match_parent"
+        layout="@layout/admob_container"
+        android:layout_alignParentTop="true" />
+
+    <ProgressBar
+        android:id="@+id/pb_webloading"
+        style="@style/progress_bar_custom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/adView"/>
+
+    <WebView
+        android:id="@+id/web_view_news"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_webloading" />
+    
+    
+
+</RelativeLayout>

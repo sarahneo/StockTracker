@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory 
+        android:title="@string/about_app"
+        android:key="sp_key_about_app" >
+        <ListPreference
+            android:dialogTitle="@string/default_starting_page"
+            android:entries="@array/defult_starting_page_entries"
+            android:entryValues="@array/defult_starting_page_entryvalues"
+            android:key="sp_key_default_staring_page"
+            android:summary="@string/overview_sp"
+            android:title="@string/default_starting_page" />
+
+        <CheckBoxPreference
+            android:key="sp_key_auto_refresh"
+            android:title="@string/auto_refresh" />
+        
+        <CheckBoxPreference
+            android:key="sp_key_auto_add_news_alert"
+            android:title="@string/auto_add_to_news_alert" 
+            android:summary="@string/auto_add_summary"/>
+        
+        <CheckBoxPreference
+            android:key="sp_key_is_set_alerts_window"
+            android:title="@string/set_alerts_window" />
+        
+        <Preference
+            android:dependency="sp_key_is_set_alerts_window"
+            android:key="sp_key_alerts_window"
+            android:summary="@string/alerts_window_summary"
+            android:title="@string/alerts_window" />
+
+        <ListPreference
+            android:dependency="sp_key_auto_refresh"
+            android:dialogTitle="@string/refresh_frequency"
+            android:entries="@array/sp_refresh_frequency_entries"
+            android:entryValues="@array/sp_refresh_frequency_values"
+            android:key="sp_key_refresh_frequency"
+            android:summary="@string/sp_refresh_frequency_2"
+            android:title="@string/refresh_frequency" />
+        
+        <ListPreference            
+            android:dialogTitle="@string/set_theme"
+            android:entries="@array/sp_app_theme_entries"
+            android:entryValues="@array/sp_app_theme_entries"
+            android:key="sp_key_app_theme"
+            android:summary="@string/light_theme"
+            android:title="@string/set_theme" />
+        
+        <Preference
+            android:key="sp_key_import_csv"
+            android:summary=""
+            android:title="@string/import_csv_title" />
+        
+    </PreferenceCategory>
+    <PreferenceCategory 
+        android:title="@string/more"
+        android:key="sp_key_more" >
+        <Preference
+            android:key="sp_key_app_version"
+            android:summary=""
+            android:title="@string/app_version_number" />
+        <Preference
+            android:key="sp_key_other_applications"
+            android:summary="@string/other_applications_summary"
+            android:title="@string/other_applications" />
+        <Preference
+            android:key="sp_key_tell_a_friend"
+            android:summary="@string/tell_a_friend_summary"
+            android:title="@string/tell_a_friend" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <View
+        android:id="@+id/color_bar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/orange" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
+        
+        <TextView
+            android:id="@+id/tv_roi_value"
+            android:layout_height="55dp"
+            android:layout_width="70dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/white"
+            android:text="20.0%"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium" 
+            android:background="@drawable/arrow_down_orange" />
+        
+        <TextView
+	        android:id="@+id/tv_perf_symbol"
+	        android:layout_width="fill_parent"
+	        android:layout_height="20dp"
+	        android:layout_toLeftOf="@id/tv_roi_value"
+	        android:layout_alignTop="@id/tv_roi_value"
+	        android:singleLine="true"
+	        android:text="@string/symbol_example"
+	        android:gravity="center"
+	        android:textAppearance="?android:attr/textAppearanceMedium" 
+	        android:textColor="@color/black" />
+            
+	    <TextView
+	        android:id="@+id/tv_perf_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="35dp"
+	        android:layout_below="@id/tv_perf_symbol"
+	        android:layout_toLeftOf="@id/tv_roi_value"	   
+	        android:layout_alignBottom="@id/tv_roi_value"    	        
+	        android:maxLines="2"
+	        android:ellipsize="end"
+	        android:text="Royal Caribbean Ltd"
+	        android:gravity="center|bottom"
+	        android:textColor="@color/dark_blue"
+	        android:textAppearance="?android:attr/textAppearanceSmall"  />    
+	        
+	    <TextView
+	        android:id="@+id/tv_net_gain_loss_title"
+	        android:layout_width="match_parent"
+	        android:layout_height="20dp"
+	        android:layout_toRightOf="@id/tv_roi_value"
+	        android:layout_alignTop="@id/tv_perf_symbol"
+	        android:singleLine="true"
+	        android:textColor="@color/blue"
+	        android:text="@string/net_gain_or_loss"	        
+	        android:gravity="right"
+	        android:textAppearance="?android:attr/textAppearanceSmall" />
+	    
+	    <TextView
+	        android:id="@+id/tv_net_gain_loss_value"
+	        android:layout_width="match_parent"
+	        android:layout_height="35dp"
+	        android:layout_toRightOf="@id/tv_roi_value"
+	        android:layout_alignBottom="@id/tv_roi_value"	        
+	        android:layout_below="@id/tv_net_gain_loss_title"
+	        android:gravity="right|bottom"
+	        android:singleLine="true"
+	        android:text="@string/symbol_example"
+	        android:textSize="20sp"
+	        android:textColor="@color/black" />
+	    
+	</RelativeLayout>
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:id="@+id/layout_wrap_realized"
+            style="@style/rounded_gray_rect_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"            
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/tv_realized_gain_loss_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/realized_gain_loss_title"                
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+            
+            <TextView
+                android:id="@+id/tv_realized_gain_loss_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="$10,000.00"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_wrap_unrealized"
+            style="@style/rounded_gray_rect_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"        
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="15dp" >
+            
+            <TextView
+                android:id="@+id/tv_unrealized_gain_loss_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/unrealized_gain_loss_title"                
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_unrealized_gain_loss_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="-$4,000.00"
+                android:textColor="@color/edit_text_background_dark"
+                android:textSize="20sp" />
+        
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_net_asset_and_cash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/layout_wrap_asset"
+            style="@style/rounded_gray_rect_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"            
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingRight="5dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/tv_net_asset_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/net_asset"                
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+            
+            <TextView
+                android:id="@+id/tv_net_asset_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="$10,000.00"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_wrap_cash"
+            style="@style/rounded_gray_rect_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"            
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="15dp" >
+            
+            <TextView
+                android:id="@+id/tv_net_cash_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/net_cash"                
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_net_cash_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="-$4,000.00"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        
+        </LinearLayout>
+        
+    </LinearLayout>
+        
+    <ImageView 
+        style="@style/card.shadow_image"/>
+ 
+</LinearLayout>

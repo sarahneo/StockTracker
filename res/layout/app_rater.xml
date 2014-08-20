@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:textIsSelectable="true"  />
+
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:text="@string/app_rater_if_enjoy"/>
+
+
+    <Button
+        android:id="@+id/btnRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_rater_rate"
+        android:textColor="@android:color/white"
+        android:background="@drawable/calculator_button" />
+
+
+    <Button
+        android:id="@+id/btnRemind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_rater_reminder_later"
+        android:textColor="@android:color/white"
+        android:background="@drawable/calculator_button" />
+
+
+    <Button
+        android:id="@+id/btnNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_rater_no"
+        android:textColor="@android:color/white"
+        android:background="@drawable/calculator_button" />
+
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"    
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >   
+    
+    <RadioGroup
+        android:id="@+id/rg_transactions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/default_padding"
+        android:orientation="horizontal" >
+
+        <org.holoeverywhere.widget.RadioButton
+            android:id="@+id/radio_cash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/cash" />
+
+        <org.holoeverywhere.widget.RadioButton
+            android:id="@+id/radio_trades"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/trades"/>
+        
+        <org.holoeverywhere.widget.RadioButton
+            android:id="@+id/radio_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/all"/>
+
+    </RadioGroup>
+
+    <LinearLayout 
+        android:id="@+id/spinner_in_linear_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg_transactions"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+                
+	    <org.holoeverywhere.widget.Spinner
+	        android:id="@+id/spinner_symbol"
+	        android:layout_width="0dp"
+	        android:layout_height="48dp"
+	        android:layout_weight="1"
+	        android:layout_marginTop="1dp"
+	        android:padding="5.0dip" />
+	    
+	    <org.holoeverywhere.widget.Spinner
+	        android:id="@+id/spinner_sort_txns_by"
+	        android:layout_width="0dp"
+	        android:layout_height="48dp"
+	        android:layout_weight="1"
+	        android:layout_marginTop="1dp"
+	        android:padding="5.0dip" />
+    
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/card_first_row_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_in_linear_layout"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/orange"
+        android:orientation="horizontal">
+        
+	    <TextView
+	        android:id="@+id/first_column_title"
+	        style="@style/stock_positions_card_header_tv_style"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/txn_port_first_column" />
+	    
+	    <TextView
+	        android:id="@+id/second_column_title"
+	        style="@style/stock_positions_card_header_tv_style"
+	        android:layout_weight="0.9"
+	        android:gravity="center"
+	        android:text="@string/txn_port_second_column"/>
+	    
+	    <TextView
+	        android:id="@+id/third_column_title"
+	        style="@style/stock_positions_card_header_tv_style"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:text="@string/txn_port_third_column" />
+	
+	    <TextView
+	        android:id="@+id/fourth_column_title"
+	        style="@style/stock_positions_card_header_tv_style"
+	        android:layout_weight="1.5"
+	        android:gravity="center"
+	        android:text="@string/txn_port_fourth_column"/>
+	    
+	</LinearLayout>
+	
+	<ListView
+        android:id="@+id/lv_txn_port"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@id/card_first_row_layout"        
+        android:divider="@null" >
+    </ListView>
+    
+	<!-- emptyView -->
+    
+	<LinearLayout
+	    android:id="@+id/empty_txns_view"
+	    android:layout_below="@id/card_first_row_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp"
+	    android:visibility="gone"
+	    android:background="@color/white"
+	    android:orientation="vertical">
+	    
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/no_txns_text"
+	        android:gravity="center"
+	        android:padding="5dp"
+	        android:maxLines="2"
+	        android:textColor="@color/black"
+	        android:layout_margin="5dp"
+	        android:background="@color/lv_bg_color" />
+	    
+	    <TextView
+	        android:id="@+id/btn_add_new_txn"
+	        android:background="@drawable/btn_gray"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="4dp"
+	        android:gravity="center"
+	        android:padding="5dp"
+	        android:text="@string/add_new_txn"
+	        android:textColor="@color/white"
+	        android:textAppearance="?android:attr/textAppearanceSmall" />
+	    
+	    <ImageView
+	        style="@style/card.shadow_image"/>
+	
+	</LinearLayout>
+
+</RelativeLayout>

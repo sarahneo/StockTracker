@@ -1,0 +1,9 @@
+# cache for current jar dependency. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1387443815000 630573 3e7cdecabc06bfd3d1be95206d9e8d84b4d18462 C:\android-libraries\HoloEverywhere-master\library\libs\support-v4-19.0.1.jar
+1404708085557 630573 3e7cdecabc06bfd3d1be95206d9e8d84b4d18462 C:\StockTracker_v1.0.0_1D\StockTracker\quick_action_lib\libs\support-v4-19.0.1.jar
+1404708085557 630573 3e7cdecabc06bfd3d1be95206d9e8d84b4d18462 C:\StockTracker_v1.0.0_1D\StockTracker\lib_view_pager_indicator\libs\support-v4-19.0.1.jar
+1387443815000 630573 3e7cdecabc06bfd3d1be95206d9e8d84b4d18462 C:\StockTracker_v1.0.0_1D\StockTracker\StockTracker\libs\support-v4-19.0.1.jar
+1387443815000 110747 e9b63380f3a242dbdbf103a2355ad7e43bad17cb C:\android-libraries\HoloEverywhere-master\library\libs\nineoldandroids-2.4.0.jar
+1384106430000 110747 e9b63380f3a242dbdbf103a2355ad7e43bad17cb C:\StockTracker_v1.0.0_1D\StockTracker\StockTracker\libs\nineoldandroids-2.4.0.jar

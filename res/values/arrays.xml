@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="nav_drawer_items">
+        <item name="item_1">@string/nav_drawer_item1</item>
+        <item name="item_2">@string/nav_drawer_item2</item>
+        <item name="item_3">@string/nav_drawer_item3</item>
+        <item name="item_4">@string/nav_drawer_item4</item>
+        <item name="item_5">@string/nav_drawer_item5</item>
+        <item name="item_6">@string/nav_drawer_item6</item>
+        <item name="item_7">@string/nav_drawer_item7</item>        
+    </string-array>
+    <string-array name="indicator_main_page">
+        <item name="item_1">@string/indicator_alert_list</item>
+        <item name="item_2">@string/indicator_news</item>
+        <item name="item_3">@string/indicator_overview</item>
+        <item name="item_4">@string/indicator_positions</item>
+        <item name="item_5">@string/indicator_perf</item>
+        <item name="item_6">@string/indicator_distribution</item>
+    </string-array>
+    <string-array name="indicator_portfolio_page">
+        <item name="item_1">@string/overview_pager_indicator</item>
+        <item name="item_2">@string/news_pager_indicator</item>
+        <item name="item_3">@string/trade_pager_indicator</item>
+    </string-array>
+    <string-array name="add_dialog_items">
+        <item name="item_1">@string/add_dialog_item_1</item>
+        <item name="item_2">@string/add_dialog_item_2</item>
+    </string-array>
+    <string-array name="trade_type">
+        <item name="item_1">@string/trade_type_buy</item>
+        <item name="item_2">@string/trade_type_sell</item>
+        <item name="item_2">@string/trade_type_dividend</item>
+        <item name="item_2">@string/trade_type_dividend_shares</item>
+    </string-array>
+    <string-array name="date_ranges_chart">
+        <item name="item_1">@string/chart_1d</item>
+        <item name="item_2">@string/chart_5d</item>
+        <item name="item_3">@string/chart_1m</item>
+        <item name="item_4">@string/chart_3m</item>
+        <item name="item_5">@string/chart_6m</item>
+        <item name="item_6">@string/chart_1y</item>
+        <item name="item_7">@string/chart_2y</item>
+        <item name="item_8">@string/chart_5y</item>
+        <item name="item_9">@string/chart_max</item>
+    </string-array>
+    <string-array name="defult_starting_page_entries">
+        <item>@string/alerts_sp</item>
+        <item>@string/news_sp</item>
+        <item>@string/overview_sp</item>
+        <item>@string/positions_sp</item>
+        <item>@string/perf_sp</item>
+        <item>@string/dist_sp</item>
+    </string-array>
+    <string-array name="defult_starting_page_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="sp_refresh_frequency_entries">
+        <item>@string/sp_refresh_frequency_1</item>
+        <item>@string/sp_refresh_frequency_2</item>
+        <item>@string/sp_refresh_frequency_3</item>
+        <item>@string/sp_refresh_frequency_4</item>
+        <item>@string/sp_refresh_frequency_5</item>
+        <item>@string/sp_refresh_frequency_6</item>
+        <item>@string/sp_refresh_frequency_7</item>
+        <item>@string/sp_refresh_frequency_8</item>
+        <item>@string/sp_refresh_frequency_9</item>
+        <item>@string/sp_refresh_frequency_10</item>
+    </string-array>
+    <string-array name="sp_refresh_frequency_values">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>720</item>
+        <item>1440</item>
+    </string-array>
+    <string-array name="sp_app_theme_entries">
+        <item>@string/light_theme</item>
+        <item>@string/dark_theme</item>
+    </string-array>
+    <string-array name="spinner_cash_trades">
+        <item>@string/cash</item>
+        <item>@string/trades</item>
+        <item>@string/all</item>
+    </string-array>
+    <string-array name="spinner_sort_txns_by">
+        <item>SORT BY DATE</item>
+        <item>SORT BY STOCK NAME</item>
+        <item>SORT BY CASH VALUE</item>
+    </string-array>
+    <string-array name="spinner_sort_news_by">
+        <item>SORT BY DATE</item>
+        <item>SORT BY STOCK NAME</item>
+        <item>SORT BY STOCK VALUE</item>
+    </string-array>
+    <string-array name="spinner_sort_port_by">
+        <item>@string/return_on_investment</item>
+        <item>@string/realized_gain_loss</item>
+        <item>@string/unrealized_gain_loss</item>
+        <item>@string/net_gain_or_loss</item>
+        <item>@string/name</item>
+    </string-array>
+	<string-array name="news_alert_frequency_entries">
+	    <item>@string/news_alert_frequency_5</item>
+        <item>@string/news_alert_frequency_1</item>
+        <item>@string/news_alert_frequency_2</item>
+        <item>@string/news_alert_frequency_3</item>
+        <item>@string/news_alert_frequency_4</item>        
+        <item>@string/news_alert_frequency_6</item>
+        <item>@string/news_alert_frequency_7</item>
+    </string-array>
+    <string-array name="news_alert_frequency_values">
+        <item>60</item>
+        <item>1440</item>
+        <item>720</item>
+        <item>360</item>
+        <item>180</item>       
+        <item>30</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="widget_themes_entries">
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    <string-array name="add_new_transaction">
+        <item>@string/add_new_txn_item_1</item>
+        <item>@string/add_new_txn_item_2</item>
+    </string-array>
+    <string-array name="add_new_item">
+        <item>@string/portfolio_type_title</item>
+        <item>@string/add_dialog_item_2</item>
+        <item>@string/add_new_item_3</item>
+        <item>@string/add_new_item_4</item>
+    </string-array>
+    <string-array name="add_new_item_stocks_activity">
+        <item>@string/add_new_item_3</item>     
+        <item>@string/add_new_item_5</item>
+        <item>@string/add_new_item_6</item>        
+    </string-array>
+    <string-array name="portfolio_dialog_items">
+        <item>@string/edit</item>
+        <item>@string/delete</item>
+    </string-array>
+</resources>

@@ -1,0 +1,489 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="My.Holo.Theme.Dialog" parent="Holo.Theme.Dialog">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        
+        <item name="search_icon">@drawable/ic_action_search</item>
+        <item name="cancel_icon">@drawable/ic_cancel_dark</item>
+        <item name="edit_text_background_color">@color/edit_text_background_dark</item>
+    </style>
+
+    <style name="Theme.MainActivity" parent="Holo.Theme">
+		<item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="cancel_icon">@drawable/ic_cancel_dark</item>
+		<item name="save_icon">@drawable/ic_save_dark</item>
+		<item name="refresh_icon">@drawable/ic_action_refresh</item>
+		<item name="add_icon">@drawable/ic_add_dark</item>
+		<item name="delete_icon">@drawable/ic_delete_dark</item>
+		<item name="search_icon">@drawable/ic_action_search</item>
+		<item name="sort_by_icon">@drawable/ic_action_sort_by_size</item>
+		<item name="alert_icon">@drawable/ic_alert_dark</item>
+		<item name="warning_icon">@drawable/ic_action_warning</item>
+		<item name="edit_text_background_color">@color/edit_text_background_dark</item>
+		<item name="summary_background_color">@color/positions_top_bg_color</item>
+        <!-- <item name="android:typeface">serif</item> -->
+        <!-- <item name="android:typeface">sans</item> -->
+        <!-- <item name="android:typeface">monospace</item> -->        
+        <item name="portfolio_value_color">@color/orange</item>
+        <item name="tab_background_color">@color/edit_text_background_dark</item>
+        <item name="android:windowBackground">@color/app_background</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item> 
+    </style>
+    
+    <style name="Theme.MainActivityLight" parent="Holo.Theme.Light">
+		<item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="cancel_icon">@drawable/ic_cancel</item>
+		<item name="save_icon">@drawable/ic_save</item>
+		<item name="refresh_icon">@drawable/ic_update_light</item>
+		<item name="add_icon">@drawable/ic_add_light</item>
+		<item name="delete_icon">@drawable/ic_quick_action_delete_item</item>
+		<item name="search_icon">@drawable/ic_action_search_light</item>
+		<item name="sort_by_icon">@drawable/ic_action_sort_by_size_light</item>
+		<item name="alert_icon">@drawable/ic_alert</item>
+		<item name="warning_icon">@drawable/ic_alerts_warning</item>		
+		<item name="edit_text_background_color">@color/edit_text_background_light</item>
+		<item name="summary_background_color">@color/white</item>
+        <!-- <item name="android:typeface">serif</item> -->
+        <!-- <item name="android:typeface">sans</item> -->
+        <!-- <item name="android:typeface">monospace</item> --> 
+        <item name="portfolio_value_color">@color/black</item>       
+        <item name="tab_background_color">@color/tab_background_light</item>
+        <item name="android:windowBackground">@color/app_background_light</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+        <item name="actionBarStyle">@style/MyLightActionBar</item>
+        <item name="android:actionBarStyle">@style/MyLightActionBar</item> 
+    </style>
+    
+    <style name="Theme.StocksActivity" parent="Holo.Theme">
+		<item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicatorForStocksActivity</item>		
+		<item name="refresh_icon">@drawable/ic_action_refresh</item>
+		<item name="add_icon">@drawable/ic_add_dark</item>
+		<item name="warning_icon">@drawable/ic_action_warning</item>
+        <!-- <item name="android:typeface">serif</item> -->
+        <!-- <item name="android:typeface">sans</item> -->
+        <!-- <item name="android:typeface">monospace</item> -->
+        <item name="dialog_title_color">@color/white</item>
+        <item name="portfolio_value_color">@color/orange</item>
+        <item name="summary_background_color">@color/positions_top_bg_color</item>
+        <item name="android:windowBackground">@color/app_background</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item> 
+    </style>
+    
+    <style name="Theme.StocksActivityLight" parent="Holo.Theme.Light">
+		<item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicatorForStocksActivity</item>		
+		<item name="refresh_icon">@drawable/ic_update_light</item>
+		<item name="add_icon">@drawable/ic_add_light</item>
+		<item name="warning_icon">@drawable/ic_alerts_warning</item>
+        <!-- <item name="android:typeface">serif</item> -->
+        <!-- <item name="android:typeface">sans</item> -->
+        <!-- <item name="android:typeface">monospace</item> -->
+        <item name="dialog_title_color">@color/black</item>
+        <item name="portfolio_value_color">@color/black</item>
+        <item name="summary_background_color">@color/lv_bg_color</item>
+        <item name="android:windowBackground">@color/app_background_light</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+        <item name="actionBarStyle">@style/MyLightActionBar</item>
+        <item name="android:actionBarStyle">@style/MyLightActionBar</item> 
+    </style>
+    
+
+    <style name="Theme.SinglePortfolioPager" parent="Holo.Theme">
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicatorForSinglePortfolio</item>
+        <!-- <item name="android:typeface">serif</item> -->
+        <!-- <item name="android:typeface">sans</item> -->
+        <!-- <item name="android:typeface">monospace</item> -->
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+    </style>
+
+    <style name="Theme.SingleChartPager" parent="Holo.Theme.NoActionBar">
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicatorForSingleChart</item>
+        <!-- <item name="android:typeface">serif</item> -->
+        <!-- <item name="android:typeface">sans</item> -->
+        <!-- <item name="android:typeface">monospace</item> -->
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+    </style>
+    
+    <style name="MyActionBar"
+           parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="android:background">@color/black</item>
+        <item name="android:displayOptions">useLogo|showHome</item>
+        <item name="android:logo">@drawable/ic_launcher</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:progressBarStyle">@style/ProgressBarStyle</item>
+        
+        <item name="background">@color/black</item>
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/ic_launcher</item>
+        <item name="progressBarStyle">@style/ProgressBarStyle</item>
+    </style>
+    
+    <style name="MyLightActionBar"
+           parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="android:background">@color/white</item>
+        <item name="android:displayOptions">useLogo|showHome</item>
+        <item name="android:logo">@drawable/ic_launcher_light</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:progressBarStyle">@style/ProgressBarLightStyle</item>
+        <item name="android:titleTextStyle">@style/MyLightActionBar.Text</item>
+        
+        <item name="background">@color/white</item>
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/ic_launcher_light</item>
+        <item name="progressBarStyle">@style/ProgressBarLightStyle</item>
+    </style>
+    
+    <style name="MyLightActionBar.Text" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="ProgressBarStyle" parent="@android:style/Widget.Holo.ProgressBar.Small"> 
+  	    <item name="android:indeterminateDrawable">@drawable/progress_medium_holo</item> 
+  	    <item name="android:textColor">@color/white</item>
+  	    <item name="android:textColorSecondary">@color/white</item>
+    </style> 
+    
+    <style name="ProgressBarLightStyle" parent="@android:style/Widget.Holo.Light.ProgressBar.Small"> 
+  	    <item name="android:indeterminateDrawable">@drawable/progress_medium_holo</item> 
+  	    <item name="android:textColor">@color/black</item>
+  	    <item name="android:textColorSecondary">@color/black</item>
+    </style>
+
+    <style name="CustomTabPageIndicator" parent="Widget.TabPageIndicator">
+        <item name="android:background">@drawable/my_custom_tab_indicator</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <!-- <item name="android:textColor">#FF555555</item> -->        
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- <item name="android:divider">@drawable/my_custom_tab_indicator_divider_yellow</item>
+        <item name="android:dividerPadding">10dp</item> -->
+        <item name="android:showDividers">none</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:fadingEdgeLength">8dp</item>
+    </style>
+        
+    <style name="CustomTabPageIndicatorForStocksActivity" parent="Widget.TabPageIndicator">
+        <item name="android:background">@drawable/stocks_activity_tab_indicator</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <!-- <item name="android:textColor">#FF555555</item> -->
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- <item name="android:divider">@drawable/my_custom_tab_indicator_divider_green</item>
+        <item name="android:dividerPadding">10dp</item> -->
+        <item name="android:showDividers">none</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:fadingEdgeLength">8dp</item>
+    </style>
+
+    <style name="CustomTabPageIndicatorForSinglePortfolio" parent="Widget.TabPageIndicator">
+        <item name="android:background">@drawable/my_custom_tab_indicator</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:divider">@drawable/my_custom_tab_indicator_divider_green</item>
+        <item name="android:dividerPadding">10dp</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:fadingEdgeLength">8dp</item>
+    </style>
+
+    <style name="CustomTabPageIndicatorForSingleChart" parent="Widget.TabPageIndicator">
+        <item name="android:background">@drawable/stocks_activity_tab_indicator</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:gravity">top|center</item>
+        <item name="android:divider">@drawable/my_custom_tab_indicator_divider_green</item>
+        <item name="android:dividerPadding">8dp</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:fadingEdgeLength">8dp</item>
+    </style>
+
+    <style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <!-- <item name="android:typeface">monospace</item> -->
+        <!-- <item name="android:typeface">serif</item> -->
+        <item name="android:textColor">@color/my_pager_indicator_text</item>
+        <item name="android:textStyle"></item>
+    </style>
+
+    <style name="CustomUnderlinePageIndicator">
+        <item name="selectedColor">#FFCC0000</item>
+        <item name="android:background">#FFCCCCCC</item>
+        <item name="fadeLength">1000</item>
+        <item name="fadeDelay">1000</item>
+    </style>
+
+    <style name="Theme.MainActivity.OriginalOne" parent="Holo.Theme">
+        <item name="vpiIconPageIndicatorStyle">@style/Widget.IconPageIndicator</item>
+        <!-- <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator</item> -->
+        <item name="vpiTabPageIndicatorStyle">@style/My.TabPageIndicator</item>
+    </style>
+
+    <style name="My.TabPageIndicator" parent="Widget.TabPageIndicator">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAppearance">@style/My.TextAppearance.TabPageIndicator</item>
+    </style>
+
+    <style name="My.TextAppearance.TabPageIndicator" parent="TextAppearance.TabPageIndicator">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/vpi__light_theme</item>
+    </style>
+
+    <style name="SearchCurrencyTheme" parent="Holo.Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- View Style -->
+    <style name="tv_style_statistics">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingBottom">1.0dip</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="tv_style_key_statistics">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingBottom">1.0dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- WebView style -->
+    <style name="progress_bar_custom" parent="android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_custom</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:minHeight">2.0dip</item>
+        <item name="android:maxHeight">2.0dip</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:dropDownWidth">fill_parent</item>
+        <item name="android:showDividers">beginning|middle|end</item>
+        <item name="android:alignmentMode">alignBounds</item>
+        <item name="android:dividerHeight">2dp</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">false</item>
+        <!-- <item name="android:scrollbarTrackVertical">@android:color/transparent</item> -->
+        <item name="android:dropDownSelector">@android:color/white</item>
+        <item name="android:requiresFadingEdge">none</item>
+    </style>
+
+    <style name="behind_btn_layout_style">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@color/btn_behind_btn_layout_bg_color</item>
+        <item name="android:minHeight">48.0dip</item>
+        <item name="android:padding">5.0dip</item>
+    </style>
+
+    <style name="behind_btn_layout_style_2">
+        <item name="android:background">@color/btn_behind_btn_layout_bg_color</item>
+        <item name="android:minHeight">48.0dip</item>
+        <item name="android:padding">5.0dip</item>
+    </style>
+
+    <style name="my_custom_btn_style">
+        <item name="android:textColor">@color/btn_txt_color</item>
+        <item name="android:layout_margin">@dimen/default_margin</item>
+    </style>
+
+    <style name="my_holo_listview_light_for_widget" parent="Holo.ListView.Light" />
+
+    <style name="my_progress_bar_style">
+        <item name="android:autoStart">true</item>
+        <item name="android:drawingCacheQuality">high</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:focusable">false</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateBehavior">cycle</item>
+        <item name="android:indeterminateOnly">true</item>
+    </style>
+    
+    <style name="transparent_bg_style">
+        <item name="android:background">@color/transparent</item>        
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+    
+    <style name="stock_positions_card_header_tv_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4.0dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="stock_positions_card_tv_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4.0dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="cash_positions_card_tv_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">4.0dip</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="txn_port_card_header_tv_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4.0dip</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="alerts_card_header_tv_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4.0dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="rounded_gray_rect_style">
+        <item name="android:background">@drawable/rounded_gray_rect</item>
+    </style>
+    
+    <style name="widget_portfolio_watchlist_light_theme_row">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    
+    <style name="widget_portfolio_watchlist_dark_theme_row">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:background">@color/widget_row_color_dark</item>
+    </style>
+    
+    <style name="widget_portfolio_watchlist_light_theme_company">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>        
+    </style>
+    
+    <style name="widget_portfolio_watchlist_light_theme_price">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>        
+    </style>
+    
+    <style name="widget_portfolio_watchlist_light_theme_symbol">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:minWidth">50dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>        
+    </style>
+    
+    <style name="widget_portfolio_watchlist_light_theme_net">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:minWidth">50dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>        
+    </style>
+    
+    <style name="widget_portfolio_watchlist_light_theme_color">
+        <item name="android:layout_width">5dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_alignParentLeft">true</item>   
+    </style>
+    
+    <style name="widget_news_light_theme_row">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/widget_row_item</item>
+    </style>
+    
+    <style name="widget_news_light_theme_company_news">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>        
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    
+    <style name="widget_news_light_theme_headline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textStyle">bold</item>  
+        <item name="android:ellipsize">end</item>        
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <!--Style for shadow image-->
+    <style name="card.shadow_image">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/card_shadow_height</item>
+        <item name="android:src">@drawable/card_shadow</item>
+    </style>
+</resources>

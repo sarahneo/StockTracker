@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="4dp" 
+        android:background="@color/transparent"/>
+    
+        
+    <TextView
+        android:id="@+id/card_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:gravity="left"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        android:text="@string/long_positions_overall" />
+	    
+    <TableRow
+        android:id="@+id/card_first_row_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:orientation="horizontal">
+        
+	    <TextView
+	        android:id="@+id/first_column_title"
+	        style="@style/stock_positions_card_header_tv_style"
+	        android:layout_weight="1.3"
+	        android:gravity="left"
+	        android:text="@string/stock_pos_first_column" />
+	    
+	    <TextView
+	        android:id="@+id/second_column_title"
+	        style="@style/stock_positions_card_header_tv_style"
+	        android:layout_weight="0.9"
+	        android:gravity="center"
+	        android:text="@string/stock_pos_second_column"/>
+	    
+	    <TextView
+	        android:id="@+id/third_column_title"
+	        style="@style/stock_positions_card_header_tv_style"
+	        android:layout_weight="1.1"
+	        android:gravity="center"
+	        android:text="@string/stock_pos_third_column" />
+	
+	    <TextView
+	        android:id="@+id/fourth_column_title"
+	        style="@style/stock_positions_card_header_tv_style"
+	        android:layout_weight="1.2"
+	        android:gravity="center"
+	        android:text="@string/stock_pos_fourth_column"/>
+	    
+	</TableRow>
+
+</TableLayout>

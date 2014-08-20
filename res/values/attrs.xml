@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ButtonDrawables">
+        <!-- name of the attribute that will be used in XML files -->
+        <attr name="launcher_icon" format="reference"/>
+        <attr name="cancel_icon" format="reference"/>
+        <attr name="save_icon" format="reference"/>
+        <attr name="refresh_icon" format="reference"/>
+        <attr name="add_icon" format="reference"/>
+        <attr name="delete_icon" format="reference"/>
+        <attr name="search_icon" format="reference"/>
+        <attr name="sort_by_icon" format="reference"/>
+        <attr name="alert_icon" format="reference"/>
+        <attr name="warning_icon" format="reference"/>        
+        
+        <attr name="dialog_title_color" format="reference|color"/>
+        <attr name="portfolio_value_color" format="reference|color"/>
+        <attr name="tab_background_color" format="reference|color"/>
+        <attr name="summary_background_color" format="reference|color"/>
+        <attr name="edit_text_background_color" format="reference|color"/>
+    </declare-styleable>
+</resources>

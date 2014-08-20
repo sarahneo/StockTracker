@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+	    
+        <RadioGroup
+            android:id="@+id/radioBtnGrp_alerts"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal" >
+
+            <org.holoeverywhere.widget.RadioButton
+                android:id="@+id/radio_price_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:checked="true"
+                android:text="@string/price_alerts"
+                android:textSize="12sp" />
+
+            <org.holoeverywhere.widget.RadioButton
+                android:id="@+id/radio_news_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/news_alerts"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/btn_add_alert"
+                style="@style/transparent_bg_style"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/stock_positions"
+                android:padding="8dp"
+                android:scaleType="fitEnd"
+                android:src="?attr/add_icon" />
+        </RadioGroup>
+
+	   
+		<TableLayout
+		    android:id="@+id/table_price_alert"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_marginRight="5dp"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginTop="5dp"
+	        android:layout_below="@id/radioBtnGrp_alerts">
+		    
+		    <TableRow
+		        android:id="@+id/tr_price_alert"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/green">
+		        
+		        <TextView
+		            style="@style/alerts_card_header_tv_style"
+		            android:layout_weight="1.3"
+		            android:text="@string/stock_pos_first_column" />
+		        
+		        <TextView
+		            style="@style/alerts_card_header_tv_style"
+		            android:layout_weight="1"
+		            android:gravity="center"
+		            android:text="@string/price_alerts_second_col" />
+		        
+		        <TextView
+		            style="@style/alerts_card_header_tv_style"
+		            android:layout_weight="1"
+		            android:gravity="center"
+		            android:text="@string/price_alerts_third_col" />
+		        
+		        <TextView
+		            style="@style/alerts_card_header_tv_style"
+		            android:layout_weight="1"
+		            android:gravity="center"
+		            android:text="@string/news_alerts_third_col" />
+		        
+		    </TableRow>
+		    
+		</TableLayout>
+			    
+		<TableLayout
+		    android:id="@+id/table_news_alert"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_marginRight="5dp"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginTop="5dp"
+	        android:layout_below="@id/radioBtnGrp_alerts">
+		    
+		    <TableRow
+		        android:id="@+id/tr_news_alert"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/orange">
+		        
+		        <TextView
+		            style="@style/alerts_card_header_tv_style"
+		            android:layout_weight="1"
+		            android:text="@string/stock_pos_first_column" />
+		        
+		        <TextView
+		            style="@style/alerts_card_header_tv_style"
+		            android:layout_weight="1"
+		            android:gravity="center"
+		            android:text="@string/news_alerts_second_col" />
+		        
+		        <TextView
+		            style="@style/alerts_card_header_tv_style"
+		            android:layout_weight="1"
+		            android:gravity="center"
+		            android:text="@string/news_alerts_third_col" />
+		        
+		    </TableRow>
+		    
+		</TableLayout>
+		
+		<ImageView
+		    android:id="@+id/shadow_news"
+		    android:layout_below="@id/table_news_alert"		    
+		    android:layout_marginRight="5dp"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginBottom="5dp"
+		    style="@style/card.shadow_image"/>
+		
+		<ImageView
+		    android:id="@+id/shadow_price"
+		    android:layout_below="@id/table_price_alert"		    
+		    android:layout_marginRight="5dp"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginBottom="5dp"
+		    style="@style/card.shadow_image"/>
+	    
+	</RelativeLayout>
+
+</ScrollView>

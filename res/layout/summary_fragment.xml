@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scroll_view_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="15.0dip"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip"
+            android:paddingTop="5.0dip" >
+
+            <ImageView
+                android:id="@+id/iv_summary_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                              
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/iv_descreption"
+                android:background="@color/lv_bg_color"
+                android:src="@drawable/yhoo_chart" />
+            
+            <LinearLayout
+                android:id="@+id/layout_key_stats_first_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_summary_chart"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"     
+                android:background="@color/white"          
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_prev_close_title"
+                    style="@style/tv_style_key_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/prev_close" />
+                                
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray" />
+                
+                <TextView
+                    android:id="@+id/tv_days_range_title"
+                    style="@style/tv_style_key_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/day_rang" />
+                
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray" />
+                
+                <TextView
+                    android:id="@+id/tv_valume_title"
+                    style="@style/tv_style_key_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/valume" />
+         
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/layout_key_stats_second_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_key_stats_first_row"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"                
+                android:background="@color/white"
+                android:orientation="horizontal" >
+                
+                <TextView
+                    android:id="@+id/tv_prev_close_price"
+                    style="@style/tv_style_key_statistics"
+                    android:text="@string/na_with_slash" />
+                
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray" />
+                
+                <TextView
+                    android:id="@+id/tv_days_range_prices"
+                    style="@style/tv_style_key_statistics"
+                    android:text="@string/na_dash_na" />
+                
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray" />
+
+                <TextView
+                    android:id="@+id/tv_valume_number"
+                    style="@style/tv_style_key_statistics"
+                    android:text="@string/na_with_slash" />
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/horizontal_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_key_stats_second_row"
+                android:padding="5dp" 
+                android:background="@color/white">
+                
+                <View
+                    android:layout_width="match_parent"
+                	android:layout_height="1dp"
+                    android:background="@color/light_gray"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/layout_key_stats_third_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/horizontal_divider"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"                
+                android:background="@color/white"
+                android:orientation="horizontal" >
+                
+                <TextView
+                    android:id="@+id/tv_avg_vol_title"
+                    style="@style/tv_style_key_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/avg_vol" />
+                
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray" />
+
+                <TextView
+                    android:id="@+id/tv_year_range_titile"
+                    style="@style/tv_style_key_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/year_range" />
+                
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray" />
+                
+                <TextView
+                    android:id="@+id/tv_market_cap_title"
+                    style="@style/tv_style_key_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/market_cap" />                
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/layout_key_stats_fourth_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_key_stats_third_row"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp" 
+                android:background="@color/white"
+                android:orientation="horizontal" >
+                
+                <TextView
+                    android:id="@+id/tv_avg_vol_number"
+                    style="@style/tv_style_key_statistics"
+                    android:text="@string/na_with_slash" />       
+                    
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray" />
+                    
+                <TextView
+                    android:id="@+id/tv_year_range_price"
+                    style="@style/tv_style_key_statistics"
+                    android:text="@string/na_dash_na" />
+                
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray" />
+                
+                <TextView
+                    android:id="@+id/Tv_market_cap_number"
+                    style="@style/tv_style_key_statistics"
+                    android:text="@string/na_with_slash" />
+                
+            </LinearLayout>
+            
+            <ImageView
+                android:id="@+id/chart_stats_shadow"
+                android:layout_below="@id/layout_key_stats_fourth_row"
+                style="@style/card.shadow_image"/>
+            
+            <TextView
+                android:id="@+id/tv_news_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+		        android:padding="4.0dip"
+                android:layout_below="@id/chart_stats_shadow"
+                android:background="@color/blue"
+				android:layout_marginTop="5dp"
+                android:text="@string/news_sp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+            
+            <RelativeLayout 
+                android:id="@+id/news_first_row"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@id/tv_news_title"
+			    android:padding="5dp"
+			    android:background="@drawable/card_row_item_bg"
+			    android:orientation="vertical" >
+			
+			    <TextView
+			        android:id="@+id/tv_news_title1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_alignParentTop="true"
+			        android:paddingLeft="5.0dip"
+			        android:paddingRight="5.0dip"
+			        android:text=""
+			        android:textColor="@color/black"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			    <TextView
+			        android:id="@+id/tv_news_desciption_with_link1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_below="@+id/tv_news_title1"
+			        android:paddingLeft="5.0dip"
+			        android:paddingRight="5.0dip"
+			        android:maxLines="2"
+        			android:ellipsize="end"
+			        android:text=""
+			        android:textColor="@color/black" />
+			
+			    <TextView
+			        android:id="@+id/tv_news_pub_date1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_below="@+id/tv_news_desciption_with_link1"
+			        android:paddingLeft="5.0dip"
+			        android:paddingRight="5.0dip"
+			        android:singleLine="true"
+			        android:text=""
+			        android:textSize="10sp"
+			        android:textColor="@color/blue" />
+			
+			</RelativeLayout>
+			
+            <RelativeLayout 
+                android:id="@+id/news_second_row"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@id/news_first_row"
+			    android:padding="5dp"
+			    android:background="@drawable/card_row_item_bg"
+			    android:orientation="vertical" >
+			
+			    <TextView
+			        android:id="@+id/tv_news_title2"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_alignParentTop="true"
+			        android:paddingLeft="5.0dip"
+			        android:paddingRight="5.0dip"
+			        android:text=""
+			        android:textColor="@color/black"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			    <TextView
+			        android:id="@+id/tv_news_desciption_with_link2"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_below="@+id/tv_news_title2"
+			        android:paddingLeft="5.0dip"
+			        android:paddingRight="5.0dip"
+			        android:maxLines="2"
+        			android:ellipsize="end"
+			        android:text=""
+			        android:textColor="@color/black" />
+			
+			    <TextView
+			        android:id="@+id/tv_news_pub_date2"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_below="@+id/tv_news_desciption_with_link2"
+			        android:paddingLeft="5.0dip"
+			        android:paddingRight="5.0dip"
+			        android:singleLine="true"
+			        android:text=""
+			        android:textSize="10sp"
+			        android:textColor="@color/blue" />
+			
+			</RelativeLayout>
+			
+            <RelativeLayout 
+                android:id="@+id/news_third_row"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@id/news_second_row"
+			    android:padding="5dp"
+			    android:background="@drawable/card_row_item_bg">
+			
+			    <TextView
+			        android:id="@+id/tv_news_title3"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_alignParentTop="true"
+			        android:paddingLeft="5.0dip"
+			        android:paddingRight="5.0dip"
+			        android:text=""
+			        android:textColor="@color/black"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+			    <TextView
+			        android:id="@+id/tv_news_desciption_with_link3"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_below="@+id/tv_news_title3"
+			        android:paddingLeft="5.0dip"
+			        android:paddingRight="5.0dip"
+			        android:maxLines="2"
+        			android:ellipsize="end"
+			        android:text=""
+			        android:textColor="@color/black" />
+			
+			    <TextView
+			        android:id="@+id/tv_news_pub_date3"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_below="@+id/tv_news_desciption_with_link3"
+			        android:paddingLeft="5.0dip"
+			        android:paddingRight="5.0dip"
+			        android:singleLine="true"
+			        android:text=""
+			        android:textSize="10sp"
+			        android:textColor="@color/blue" />
+			
+			</RelativeLayout>
+			
+            <ImageView
+                android:id="@+id/summary_news_shadow"
+                android:layout_below="@id/news_third_row"
+                style="@style/card.shadow_image"/>
+
+            <TextView
+                android:id="@+id/tv_statistics_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+		        android:padding="4.0dip"
+                android:layout_below="@id/summary_news_shadow"
+                android:background="@color/blue"
+				android:layout_marginTop="5dp"
+                android:text="@string/other_statistics"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_open_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_statistics_title"
+                android:padding="5dp"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_open_title"
+                    style="@style/tv_style_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/open" />
+
+                <TextView
+                    android:id="@+id/tv_open_price"
+                    style="@style/tv_style_statistics"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/na_with_slash" />
+                
+                <TextView
+                    android:id="@+id/tv_bid_title"
+                    style="@style/tv_style_statistics"
+					android:textStyle="bold"
+                    android:text="@string/bid" />
+
+                <TextView
+                    android:id="@+id/tv_bit_price"
+                    style="@style/tv_style_statistics"
+                    android:text="@string/na_with_slash" />
+                
+                
+            </LinearLayout>
+
+            
+
+            
+
+            <LinearLayout
+                android:id="@+id/layout_ask"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_open_title"
+                android:padding="5dp"
+                android:background="@drawable/card_row_item_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_ask_title"
+                    style="@style/tv_style_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/ask" />
+
+                <TextView
+                    android:id="@+id/tv_ask_price"
+                    style="@style/tv_style_statistics"
+                    android:text="@string/na_with_slash" />
+                
+                <TextView
+                    android:id="@+id/tv_year_targe_title"
+                    style="@style/tv_style_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/year_target_est" />
+
+                <TextView
+                    android:id="@+id/tv_year_targe_price"
+                    style="@style/tv_style_statistics"
+                    android:text="@string/na_with_slash" />
+            </LinearLayout>
+
+            <!--
+            <RelativeLayout
+                android:id="@+id/layout_next_earning_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_p_e"
+                android:background="@drawable/list_section_divider_holo_light" >
+
+                <TextView
+                    android:id="@+id/tv_next_earning_date_title"
+                    style="@style/tv_style_statistics"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left"
+                    android:text="@string/next_earning_date" />
+
+                <TextView
+                    android:id="@+id/tv_next_earning_date_txt"
+                    style="@style/tv_style_statistics"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:text="@string/na_with_slash" />
+            </RelativeLayout>
+
+            -->
+
+            <LinearLayout
+                android:id="@+id/layout_eps"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_ask"
+                android:padding="5dp"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_eps_title"
+                    style="@style/tv_style_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/eps" />
+
+                <TextView
+                    android:id="@+id/tv_eps_number"
+                    style="@style/tv_style_statistics"
+                    android:text="@string/na_with_slash" />
+                
+                <TextView
+                    android:id="@+id/tv_p_e_title"
+                    style="@style/tv_style_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/price_earning_ratio" />
+
+                <TextView
+                    android:id="@+id/tv_p_e_number"
+                    style="@style/tv_style_statistics"
+                    android:text="@string/na_with_slash" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_div_yield"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_eps"
+                android:padding="5dp"
+                android:background="@drawable/card_row_item_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_div_yield_title"
+                    style="@style/tv_style_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/div_yield" />
+
+                <TextView
+                    android:id="@+id/tv_div_yield_txt"
+                    style="@style/tv_style_statistics"
+                    android:text="@string/na_braces_na" />
+                
+                <TextView
+                    android:id="@+id/tv_beta_title"
+                    style="@style/tv_style_statistics"
+                    android:textStyle="bold"
+                    android:text="@string/beta" />
+
+                <TextView
+                    android:id="@+id/tv_beta_number"
+                    style="@style/tv_style_statistics"
+                    android:text="@string/na_with_slash" />
+            </LinearLayout>
+            
+            <ImageView
+                android:id="@+id/other_stats_shadow"
+                android:layout_below="@id/layout_div_yield"
+                style="@style/card.shadow_image"/>
+
+            <ProgressBar
+                android:id="@+id/pb_detail_loading"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_news_title"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

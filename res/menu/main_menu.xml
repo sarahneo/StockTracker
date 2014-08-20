@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_add_item"
+        android:title="@string/add_new_portfolio"
+        android:icon="?attr/add_icon"
+        android:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/menu_refresh"
+        android:title="@string/update_title"
+        android:icon="?attr/refresh_icon"
+        android:showAsAction="always"/>
+
+</menu>

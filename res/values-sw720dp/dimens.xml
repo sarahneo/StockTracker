@@ -1,0 +1,19 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    -->
+   
+    <dimen name="pie_thickness">40dp</dimen>
+	<dimen name="pie_graph_height">300dp</dimen>
+	<dimen name="pie_graph_tv_width">150dp</dimen>
+	
+	<dimen name="default_spacing_minor">16dp</dimen>
+    <dimen name="default_spacing_micro">8dp</dimen>
+    
+    <dimen name="find_stocks_dialog_height">450dp</dimen>
+    
+    <dimen name="nav_drawer_width">400dp</dimen>
+
+</resources>

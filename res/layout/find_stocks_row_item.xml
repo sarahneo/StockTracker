@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+    
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/card_row_item_bg"
+	    android:minHeight="52.0dip"
+	    android:orientation="vertical" >
+	    
+	    <TextView
+	        android:id="@+id/tv_stock_symbol_item"
+	        android:layout_width="wrap_content"
+	        android:maxWidth="240dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:paddingTop="9.0dip"
+	        android:paddingBottom="5.0dip"
+	        android:paddingLeft="8.0dip"
+	        android:textColor="@color/black"
+	        android:text="@string/symbol_example" 
+	        android:textStyle="bold"
+	        android:textAppearance="?android:attr/textAppearanceMedium"/>
+	
+	    <TextView
+	        android:id="@+id/tv_stock_name_item"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@id/tv_stock_symbol_item"
+	        android:paddingLeft="8.0dip"
+	        android:paddingBottom="5dp"
+	        android:singleLine="true"
+	        android:text="@string/name_example"
+	        android:textColor="@color/black" />
+	
+	    <TextView
+	        android:id="@+id/tv_stock_type_item"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:paddingTop="9.0dip"
+	        android:layout_toRightOf="@id/tv_stock_symbol_item"
+	        android:gravity="right"
+	        android:paddingRight="8.0dip"
+	        android:singleLine="true"
+	        android:textColor="@color/black"
+	        android:text="Equity - NYSE"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	</RelativeLayout>
+	
+</LinearLayout>

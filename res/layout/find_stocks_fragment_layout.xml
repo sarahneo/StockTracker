@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_no_network_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/list_layout"
+        android:gravity="left"
+        android:padding="5.0dip"
+        android:text="@string/no_network_connection" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="?attr/edit_text_background_color"
+        android:paddingBottom="1.0dip"
+        android:paddingTop="4.0dip" >        
+
+        <ImageView
+            android:id="@+id/bt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:contentDescription="@string/iv_descreption"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="2.0dip"
+            android:src="?attr/search_icon" />
+
+        <EditText
+            android:id="@+id/et_search_term"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/search_symbol_hint_text"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textCapCharacters"
+            android:minHeight="52.0dip"
+            android:paddingLeft="40.0dip"
+            android:singleLine="true"      
+            android:textCursorDrawable="@null"  
+            style="@android:style/TextAppearance.Small" />
+    </FrameLayout>
+    
+    <it.gmariotti.cardslib.library.view.CardListView
+        android:id="@+id/cardsview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_above="@+id/frameLayout1"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="top"/> 
+    
+    <RelativeLayout
+        android:id="@+id/list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/frameLayout1"
+        android:layout_margin="6dp"
+        android:gravity="top" >
+        
+        <TextView
+            android:id="@+id/symbol_callback_row_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:padding="4.0dip"
+            android:text="@string/search_results"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white" />
+
+        <ListView
+            android:id="@+id/lv_symbols_call_back"
+            android:divider="@null"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/symbol_callback_row_header" >
+        </ListView>
+
+        <org.holoeverywhere.widget.ProgressBar
+            android:id="@+id/pb_loading"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_alignTop="@+id/lv_symbols_call_back"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    
+</RelativeLayout>

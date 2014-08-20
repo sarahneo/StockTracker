@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/card_row_item_bg"
+	    android:minHeight="48.0dip"
+	    android:orientation="horizontal" >
+	
+	    <TextView
+	        android:id="@+id/cash_pos_first_col"
+	        style="@style/cash_positions_card_tv_style"
+	        android:text="@string/cash_pos_first_column" />
+	
+	    <TextView
+	        android:id="@+id/cash_pos_second_col"
+	        style="@style/cash_positions_card_tv_style"
+	        android:text="@string/cash_pos_second_column" />
+	
+	    <TextView
+	        android:id="@+id/cash_pos_third_col"
+	        style="@style/cash_positions_card_tv_style"
+	        android:text="@string/cash_pos_third_column"
+	        android:textColor="@color/black" />
+	
+	    <TextView
+	        android:id="@+id/cash_pos_fourth_col"
+	        style="@style/cash_positions_card_tv_style"
+	        android:text="@string/cash_pos_fourth_column"
+	        android:textStyle="bold" />
+	
+	</LinearLayout>
+	
+</LinearLayout>
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <org.holoeverywhere.widget.Spinner
+        android:id="@+id/spinner_filter_port"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:padding="5.0dip" />
+
+    <ListView
+        android:id="@+id/lv_txn_stock"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/spinner_filter_port"  
+        android:divider="@null"
+        android:padding="6dp" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/layout_when_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/overall_positions"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_no_info_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/lv_bg_color"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="5dp"
+            android:text="@string/stock_not_found_in_port_text"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/btn_add_stock_to_port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_gray"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/add_stock_to_port"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white" />
+
+        <ImageView style="@style/card.shadow_image" />
+    </LinearLayout>
+
+</RelativeLayout>

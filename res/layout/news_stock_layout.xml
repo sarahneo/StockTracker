@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/tv_no_network_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="5.0dip"
+        android:text="@string/no_network_connection" />
+
+    <ListView
+        android:id="@+id/lv_news_stock"        
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:divider="@null"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+    
+    <!-- emptyView -->
+    
+	<LinearLayout
+	    android:id="@+id/empty_news_elv"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="5dp"
+	    android:visibility="gone"
+	    android:background="@color/white"
+	    android:orientation="vertical">
+	    
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/no_stocks_text"
+	        android:gravity="center"
+	        android:padding="5dp"
+	        android:maxLines="2"
+	        android:textColor="@color/black"
+	        android:layout_margin="5dp"
+	        android:background="@color/lv_bg_color" />
+	    
+	    <ImageView
+	        style="@style/card.shadow_image"/>
+	    	
+	</LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_news_loading"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

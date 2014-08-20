@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="20dp"
+    android:background="@color/widget_bg_color" >
+
+    <RelativeLayout
+        android:id="@+id/appwidget_header_news"
+        android:layout_width="fill_parent"
+        android:layout_height="24dp"
+        android:background="@color/widget_indicator_bg_color" >
+
+        <Button
+            android:id="@+id/btn_widget_find_symbol_news"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/btn_widget_search" />
+
+        <TextView
+            android:id="@+id/appwidget_last_update_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="@string/last_udpdated_na"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_stocktracer_widget_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/appwidget_last_update_news"
+            android:contentDescription="@string/iv_descreption"
+            android:src="@drawable/ic_launcher_light" />
+
+        <LinearLayout
+            android:id="@+id/updating_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/appwidget_last_update_news"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/btn_update_widget_news"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/btn_widget_refresh" />
+
+            <LinearLayout
+                android:id="@+id/layout_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:id="@+id/pb_widget_updating"
+                    style="@style/my_progress_bar_style"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_listview_news"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/appwidget_header_news"
+        android:background="@color/widget_bg_color"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_listview_news_items"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/row_body_single_news_1"
+                style="@style/widget_news_light_theme_row" >
+
+                <TextView
+                    android:id="@+id/tv_company_news_1"
+                    style="@style/widget_news_light_theme_company_news" />
+
+                <TextView
+                    android:id="@+id/tv_news_headline_1"
+                    style="@style/widget_news_light_theme_headline" />
+                
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pager_indicator_news_1"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:background="@color/widget_bg_color"
+                android:textIsSelectable="false" />
+
+            <LinearLayout
+                android:id="@+id/row_body_single_news_2"
+                style="@style/widget_news_light_theme_row" >
+
+                <TextView
+                    android:id="@+id/tv_company_news_2"
+                    style="@style/widget_news_light_theme_company_news" />
+
+                <TextView
+                    android:id="@+id/tv_news_headline_2"
+                    style="@style/widget_news_light_theme_headline" />
+                
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pager_indicator_news_2"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:background="@color/widget_bg_color"
+                android:textIsSelectable="false" />
+
+            <LinearLayout
+                android:id="@+id/row_body_single_news_3"
+                style="@style/widget_news_light_theme_row" >
+
+                <TextView
+                    android:id="@+id/tv_company_news_3"
+                    style="@style/widget_news_light_theme_company_news" />
+
+                <TextView
+                    android:id="@+id/tv_news_headline_3"
+                    style="@style/widget_news_light_theme_headline" />
+                
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pager_indicator_news_3"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:background="@color/widget_bg_color"
+                android:textIsSelectable="false" />
+
+            <LinearLayout
+                android:id="@+id/row_body_single_news_4"
+                style="@style/widget_news_light_theme_row" >
+
+                <TextView
+                    android:id="@+id/tv_company_news_4"
+                    style="@style/widget_news_light_theme_company_news" />
+
+                <TextView
+                    android:id="@+id/tv_news_headline_4"
+                    style="@style/widget_news_light_theme_headline" />
+                
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pager_indicator_news_4"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:background="@color/widget_bg_color"
+                android:textIsSelectable="false" />
+
+            <LinearLayout
+                android:id="@+id/row_body_single_news_5"
+                style="@style/widget_news_light_theme_row" >
+
+                <TextView
+                    android:id="@+id/tv_company_news_5"
+                    style="@style/widget_news_light_theme_company_news" />
+
+                <TextView
+                    android:id="@+id/tv_news_headline_5"
+                    style="@style/widget_news_light_theme_headline" />
+                
+            </LinearLayout>
+            
+            <TextView
+                android:id="@+id/pager_indicator_news_5"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:background="@color/widget_bg_color"
+                android:textIsSelectable="false" />
+
+            <LinearLayout
+                android:id="@+id/row_body_single_news_6"
+                style="@style/widget_news_light_theme_row" >
+
+                <TextView
+                    android:id="@+id/tv_company_news_6"
+                    style="@style/widget_news_light_theme_company_news" />
+
+                <TextView
+                    android:id="@+id/tv_news_headline_6"
+                    style="@style/widget_news_light_theme_headline" />
+                
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/empty_widget_news"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/no_stock_added"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

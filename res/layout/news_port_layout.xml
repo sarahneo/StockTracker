@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/frame_news_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    
+	    <TextView
+	        android:id="@+id/tv_no_network_connection"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="left"
+	        android:padding="5.0dip"
+	        android:text="@string/no_network_connection" />
+	    
+	    <LinearLayout 
+	        android:id="@+id/spinner_layout_news"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+	        
+		    <org.holoeverywhere.widget.Spinner
+		        android:id="@+id/spinner_stock"
+		        android:layout_width="0dp"
+		        android:layout_height="48dp"
+		        android:layout_weight="1"
+		        android:layout_marginTop="1dp"
+		        android:padding="5.0dip" />
+		    
+		    <org.holoeverywhere.widget.Spinner
+		        android:id="@+id/spinner_sort_news_by"
+		        android:layout_width="0dp"
+		        android:layout_height="48dp"
+		        android:layout_weight="1"
+		        android:layout_marginTop="1dp"
+		        android:padding="5.0dip" />
+		    
+		    <ImageButton
+		        android:id="@+id/btn_search_stock"
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        style="@style/transparent_bg_style"
+		        android:src="?attr/search_icon"
+		        android:contentDescription="@string/stock_positions" />
+	    
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/layout_et_filter_news"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+	
+	        <EditText
+	            android:id="@+id/et_filter_news"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:padding="3dp"
+	            android:background="@drawable/apptheme_edit_text_holo_dark"
+	            android:minHeight="52.0dip"
+	            android:inputType="textCapCharacters"
+	            android:drawableLeft="?attr/search_icon"
+	            android:ems="10"
+	            android:hint="@string/keywords"	            
+	            android:textCursorDrawable="@null" />
+	        
+	        <ImageButton
+	            android:id="@+id/ib_close_keyboard_news"
+	            android:layout_width="52dp"
+	            android:layout_height="52dp"
+	            android:layout_weight="0"
+	            style="@style/transparent_bg_style"
+	            android:src="?attr/cancel_icon" />
+        
+        </LinearLayout>
+	    
+	</FrameLayout>
+
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_below="@id/frame_news_top"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:groupIndicator="@null"
+        android:dividerHeight="0dp"
+        android:childDivider="@color/white"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+    
+    <!-- emptyView -->
+    
+	<LinearLayout
+	    android:id="@+id/empty_news_elv"
+	    android:layout_below="@id/frame_news_top"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp"
+	    android:visibility="gone"
+	    android:background="@color/white"
+	    android:orientation="vertical">
+	    
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="4dp"
+	        android:background="@color/blue"
+	        android:gravity="center"
+	        android:textColor="@color/white"
+	        android:text="@string/latest_news" 
+	        android:textAppearance="?android:attr/textAppearanceSmall"/>
+	    
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/no_stocks_text"
+	        android:gravity="center"
+	        android:padding="5dp"
+	        android:maxLines="2"
+	        android:textColor="@color/black"
+	        android:layout_margin="5dp"
+	        android:background="@color/lv_bg_color" />
+	    
+	    <ImageView
+			style="@style/card.shadow_image" />
+	    	
+	</LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_news_loading"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

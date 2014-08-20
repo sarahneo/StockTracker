@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.google.android.gms.ads.AdView 
+    ads:adUnitId="@string/admob_ad_unit_id" 
+    ads:adSize="SMART_BANNER" 
+    android:layout_height="wrap_content" 
+    android:layout_width="fill_parent" 
+    android:layout_weight="0"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:id="@+id/adView" 
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"/>

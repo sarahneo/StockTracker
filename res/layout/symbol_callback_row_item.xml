@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_row_item_bg"
+    android:minHeight="52.0dip" >
+    
+    <TextView
+        android:id="@+id/tv_name_drop_item"
+        android:layout_width="wrap_content"
+        android:maxWidth="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:paddingLeft="9dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/black"
+        android:text="@string/name_example" 
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/tv_symbol_drop_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_name_drop_item"
+        android:paddingLeft="9.0dip"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:text="@string/symbol_example"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_price_drop_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/tv_name_drop_item"
+        android:gravity="right"
+        android:paddingRight="9dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:textColor="@color/edit_text_background_dark"
+        android:text="@string/exchange_display_example"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+        android:id="@+id/tv_change_drop_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_price_drop_item"
+        android:layout_alignBaseline="@id/tv_symbol_drop_item"
+        android:gravity="bottom"
+        android:paddingRight="9.0dip"
+        android:singleLine="true"
+        android:text="@string/symbol_example"
+        android:textStyle="bold"
+        android:textColor="@color/green" />
+	
+</RelativeLayout>

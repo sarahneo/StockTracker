@@ -1,0 +1,27 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Calculator" />
+
+    <style name="Calculator.Button">
+        <item name="android:textSize">26sp</item>
+        <item name="android:padding">1dip</item>
+        <item name="android:layout_marginTop">0dip</item>
+        <item name="android:layout_marginBottom">0dip</item>
+        <item name="android:layout_marginLeft">0dip</item>
+        <item name="android:layout_marginRight">0dip</item>
+        <item name="android:fontFamily">roboto-light</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@drawable/calculator_button</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:editable">false</item>
+    </style>
+
+    <style name="Calculator.ClearButton" parent="Calculator.Button">
+        <item name="android:background">@drawable/calculator_ac_button</item>
+    </style>
+
+    <integer name="config_mediumAnimTime">400</integer>
+
+</resources>

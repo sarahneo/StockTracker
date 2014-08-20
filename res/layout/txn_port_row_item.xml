@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_row_item_bg"
+    android:minHeight="45.0dip">
+    
+    <TextView
+        android:id="@+id/txn_port_first_col"
+        style="@style/txn_port_card_header_tv_style"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:text="@string/txn_port_first_column" />
+    
+    <TextView
+        android:id="@+id/txn_port_second_col"
+        style="@style/txn_port_card_header_tv_style"
+        android:layout_weight="0.9"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/txn_port_second_column"/>
+    
+    <TextView
+        android:id="@+id/txn_port_third_col"
+        style="@style/txn_port_card_header_tv_style"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="@string/txn_port_third_column" />
+
+    <TextView
+        android:id="@+id/txn_port_fourth_col"
+        style="@style/txn_port_card_header_tv_style"
+        android:layout_weight="1.5"
+        android:layout_gravity="center"
+        android:gravity="right"
+        android:maxLines="2"
+        android:text="@string/txn_port_fourth_column"/>
+
+</LinearLayout>
+	

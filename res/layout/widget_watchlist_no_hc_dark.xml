@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="20dp"
+    android:background="@color/widget_bg_color_dark"  >
+
+    <RelativeLayout
+        android:id="@+id/appwidget_header_watch"
+        android:layout_width="fill_parent"
+        android:layout_height="24dp"
+        android:background="@color/dark_gray" >
+
+        <Button
+            android:id="@+id/btn_widget_find_symbol_watch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/btn_widget_search_dark" />
+
+        <TextView
+            android:id="@+id/appwidget_last_update_watch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="@string/last_udpdated_na"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         	android:layout_toLeftOf="@id/appwidget_last_update_watch"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/iv_descreption"
+            android:src="@drawable/ic_launcher_light" />
+
+        <LinearLayout
+            android:id="@+id/updating_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/appwidget_last_update_watch"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/btn_update_widget_watch"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/btn_widget_refresh_dark" />
+
+            <LinearLayout
+                android:id="@+id/layout_pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:id="@+id/pb_widget_updating"
+                    style="@style/my_progress_bar_style"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_listview_watch"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/appwidget_header_watch"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_listview_watch_items"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:id="@+id/row_body_single_watchlist_1"
+                style="@style/widget_portfolio_watchlist_dark_theme_row" >
+                
+                <TextView
+			        android:id="@+id/tv_color_1"
+			        android:layout_width="5dp"
+			        android:layout_height="52dp"
+			        android:layout_marginRight="4dp"			        
+			        android:layout_alignParentLeft="true" />
+
+                <LinearLayout
+                    android:id="@+id/my_layout_top_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_color_1"
+			        android:layout_marginTop="4dp"
+			        android:layout_marginRight="4dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_name_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"                        
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tv_last_trade_price_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingLeft="5.0dip"                        
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"                        
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_layout_bottom_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/my_layout_top_1"
+                    android:layout_toRightOf="@id/tv_color_1"
+			        android:layout_marginBottom="4dp"
+			        android:layout_marginRight="4dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_symbol_with_exch_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/tv_changes_1"
+                        android:minWidth="50.0dip"                        
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/widget_blue_text"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/tv_changes_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:minWidth="50.0dip"
+                        android:paddingLeft="5.0dip"                        
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/pager_indicator_watch_1"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:background="@color/widget_bg_color_dark"
+                android:textIsSelectable="false" />
+
+            <RelativeLayout
+                android:id="@+id/row_body_single_watchlist_2"
+                style="@style/widget_portfolio_watchlist_dark_theme_row" >
+                
+                <TextView
+			        android:id="@+id/tv_color_2"
+			        android:layout_width="5dp"
+			        android:layout_height="52dp"
+			        android:layout_marginRight="4dp"			        
+			        android:layout_alignParentLeft="true" />
+
+                <LinearLayout
+                    android:id="@+id/my_layout_top_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_color_2"
+			        android:layout_marginTop="4dp"
+			        android:layout_marginRight="4dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_name_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"                        
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tv_last_trade_price_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingLeft="5.0dip"                        
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_layout_bottom_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/my_layout_top_2"
+                    android:layout_toRightOf="@id/tv_color_2"
+			        android:layout_marginBottom="4dp"
+			        android:layout_marginRight="4dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_symbol_with_exch_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/tv_changes_2"
+                        android:minWidth="50.0dip"                        
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/widget_blue_text"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/tv_changes_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:minWidth="50.0dip"
+                        android:paddingLeft="5.0dip"                        
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/pager_indicator_watch_2"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:background="@color/widget_bg_color_dark"
+                android:textIsSelectable="false" />
+
+            <RelativeLayout
+                android:id="@+id/row_body_single_watchlist_3"
+                style="@style/widget_portfolio_watchlist_dark_theme_row" >
+                
+                <TextView
+			        android:id="@+id/tv_color_3"
+			        android:layout_width="5dp"
+			        android:layout_height="52dp"
+			        android:layout_marginRight="4dp"			        
+			        android:layout_alignParentLeft="true" />
+
+                <LinearLayout
+                    android:id="@+id/my_layout_top_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_color_3"
+			        android:layout_marginTop="4dp"
+			        android:layout_marginRight="4dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_name_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"                        
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tv_last_trade_price_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingLeft="5.0dip"                        
+                        android:singleLine="true"
+                        android:textStyle="bold"                        
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_layout_bottom_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/my_layout_top_3"
+                    android:layout_toRightOf="@id/tv_color_3"
+			        android:layout_marginBottom="4dp"
+			        android:layout_marginRight="4dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_symbol_with_exch_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/tv_changes_3"
+                        android:minWidth="50.0dip"                        
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/widget_blue_text"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/tv_changes_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:minWidth="50.0dip"
+                        android:paddingLeft="5.0dip"                        
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/pager_indicator_watch_3"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:background="@color/widget_bg_color_dark"
+                android:textIsSelectable="false" />
+
+            <RelativeLayout
+                android:id="@+id/row_body_single_watchlist_4"
+                style="@style/widget_portfolio_watchlist_dark_theme_row" >
+                
+                <TextView
+			        android:id="@+id/tv_color_4"
+			        android:layout_width="5dp"
+			        android:layout_height="52dp"
+			        android:layout_marginRight="4dp"			        
+			        android:layout_alignParentLeft="true" />
+
+                <LinearLayout
+                    android:id="@+id/my_layout_top_4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_color_4"
+			        android:layout_marginTop="4dp"
+			        android:layout_marginRight="4dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_name_4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"                        
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tv_last_trade_price_4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingLeft="5.0dip"                        
+                        android:singleLine="true"
+                        android:textStyle="bold"                        
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_layout_bottom_4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/my_layout_top_4"
+                    android:layout_toRightOf="@id/tv_color_4"
+			        android:layout_marginBottom="4dp"
+			        android:layout_marginRight="4dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_symbol_with_exch_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/tv_changes_4"
+                        android:minWidth="50.0dip"                        
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/widget_blue_text"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/tv_changes_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:minWidth="50.0dip"
+                        android:paddingLeft="5.0dip"                        
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/pager_indicator_watch_4"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:background="@color/widget_bg_color_dark"
+                android:textIsSelectable="false" />
+
+            <RelativeLayout
+                android:id="@+id/row_body_single_watchlist_5"
+                style="@style/widget_portfolio_watchlist_dark_theme_row" >
+                
+                <TextView
+			        android:id="@+id/tv_color_5"
+			        android:layout_width="5dp"
+			        android:layout_height="52dp"
+			        android:layout_marginRight="4dp"
+			        android:layout_alignParentLeft="true" />
+
+                <LinearLayout
+                    android:id="@+id/my_layout_top_5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_color_5"
+			        android:layout_marginTop="4dp"
+			        android:layout_marginRight="4dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_name_5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"                        
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/tv_last_trade_price_5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingLeft="5.0dip"                        
+                        android:singleLine="true"
+                        android:textStyle="bold"                        
+                        android:textColor="@color/white"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_layout_bottom_5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/my_layout_top_5"
+                    android:layout_toRightOf="@id/tv_color_5"
+			        android:layout_marginBottom="4dp"
+			        android:layout_marginRight="4dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_symbol_with_exch_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/tv_changes_5"
+                        android:minWidth="50.0dip"                        
+                        android:paddingRight="5.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/widget_blue_text"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/tv_changes_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:minWidth="50.0dip"
+                        android:paddingLeft="5.0dip"                        
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/pager_indicator_watch_5"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:background="@color/widget_bg_color_dark"
+                android:textIsSelectable="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/empty_widget_watchlist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/no_stock_added"
+            android:visibility="gone" />
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/appwidget_bottom_watch"
+        android:layout_width="fill_parent"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_gray" >
+
+        <Button
+            android:id="@+id/btn_right_watch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"            
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/appwidget_title_watch"
+            android:background="@drawable/btn_widget_next_dark" />
+
+        <TextView
+            android:id="@id/appwidget_title_watch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="@string/watchlist_na"
+            android:textColor="@drawable/text_widget_dark"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_left_watch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toLeftOf="@id/appwidget_title_watch"
+            android:background="@drawable/btn_widget_previous_dark" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

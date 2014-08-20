@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_body_single_news"
+    style="@style/widget_news_light_theme_row" >
+    
+    <TextView
+        android:id="@+id/tv_company_news"
+        style="@style/widget_news_light_theme_company_news" />
+
+    <TextView
+       android:id="@+id/tv_news_headline"
+       style="@style/widget_news_light_theme_headline" />
+
+</LinearLayout>

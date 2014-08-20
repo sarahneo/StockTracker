@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10.0dip" >
+    
+    <TextView 
+        android:id="@+id/alerts_window_pref_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/alerts_window_summary" 
+        android:gravity="center" />
+    
+    <TextView 
+        android:id="@+id/tv_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/alerts_window_pref_desc"
+        android:layout_alignParentLeft="true"
+        android:text="@string/start_time"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+    <EditText
+        android:id="@+id/et_enter_start_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        android:layout_toRightOf="@id/tv_start_time"
+        android:layout_alignBottom="@id/tv_start_time"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"        
+        android:hint="@string/set_start_time"
+        android:imeOptions="flagNoExtractUi"
+        android:focusable="false"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView 
+        android:id="@+id/tv_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_start_time"
+        android:layout_alignRight="@id/tv_start_time"
+        android:text="@string/end_time"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <EditText
+        android:id="@+id/et_enter_end_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_end_time"
+        android:layout_alignBottom="@id/tv_end_time"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/set_end_time"
+        android:imeOptions="flagNoExtractUi"
+        android:focusable="false"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+
+</RelativeLayout>

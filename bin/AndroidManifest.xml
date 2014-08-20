@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.handyapps.stocktracker"
+    android:versionCode="7"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="20" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="false" 
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" > 
+
+        <!-- Activity: -->
+        <activity
+            android:name="com.handyapps.houseads.AdsActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:theme="@style/AdsTheme.Black" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name=".activity.MainFragmentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.MainActivityLight" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.TransactionDetailsFragmentActivity"
+            android:configChanges="orientation|keyboard|screenSize"
+            android:label="@string/stocks_activity_title"
+            android:theme="@style/Theme.StocksActivity" >
+            <intent-filter>
+                <action android:name=".TransactionDetailsFragmentActivity.refresh.activity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.NewsWebViewActivity"
+            android:theme="@style/Theme.MainActivity"
+            android:parentActivityName=".activity.MainFragmentActivity" >
+            <meta-data
+		        android:name="android.support.PARENT_ACTIVITY"
+		        android:value=".activity.MainFragmentActivity"/>
+        </activity>
+        <activity
+            android:name=".activity.TransactionsActivity"
+            android:label="@string/txn_activity_title"
+            android:theme="@style/Theme.MainActivityLight" />
+        <activity
+            android:name=".activity.ImportCSV"
+            android:theme="@style/Theme.MainActivityLight" />
+        <activity
+            android:name=".WatchlistTitlesInitialPage"
+            android:theme="@style/Theme.SinglePortfolioPager" >
+            <intent-filter>
+                <action android:name=".WatchlistTitlesInitialPage.refresh" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChartTitlesInitialPage"
+            android:configChanges="screenSize|orientation|keyboard"         
+            android:theme="@style/Theme.SingleChartPager" >
+            <intent-filter>
+                <action android:name=".ChartTitlesInitialPage.refresh" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FindStocksDialogActivityWatch"
+            android:theme="@style/My.Holo.Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".FindStocksDialogActivityAlert"
+            android:theme="@style/My.Holo.Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".FindStocksDialogActivityPort"
+            android:theme="@style/My.Holo.Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".activity.AddNewTrade"
+            android:label="@string/add_new_trade"
+            android:theme="@style/Theme.MainActivityLight" >
+            <intent-filter>
+                <action android:name=".AddNewTrade.refresh" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.AddNewAlert"
+            android:theme="@style/Theme.MainActivityLight" >
+        </activity>
+        <activity
+            android:name=".activity.PrefsActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize"
+            android:label="@string/settings"
+            android:theme="@style/Theme.MainActivityLight" >
+        </activity>
+
+        <!-- Activity: (Widget) -->
+        <activity
+            android:name=".widget.WidgetConfigPrefsActivityPortfolio"
+            android:excludeFromRecents="true"
+            android:label="@string/configure_widget"
+            android:noHistory="true"
+            android:theme="@style/Holo.Theme.Light.DarkActionBar"
+            android:icon="@drawable/ic_launcher_light" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".widget.WidgetConfigPrefsActivityWatchlist"
+            android:excludeFromRecents="true"
+            android:label="@string/configure_widget"
+            android:noHistory="true"
+            android:theme="@style/Holo.Theme.Light.DarkActionBar"
+            android:icon="@drawable/ic_launcher_light">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+       <!--  <activity
+            android:name=".widget.WidgetConfigPrefsActivityWatchlistNoHc"
+            android:excludeFromRecents="true"
+            android:label="@string/configure_widget"
+            android:noHistory="true"
+            android:theme="@style/Holo.Theme.Light.DarkActionBar"
+            android:icon="@drawable/ic_launcher_light" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".widget.WidgetConfigPrefsActivityPortfolioNoHc"
+            android:excludeFromRecents="true"
+            android:label="@string/configure_widget"
+            android:noHistory="true"
+            android:theme="@style/Holo.Theme.Light.DarkActionBar"
+            android:icon="@drawable/ic_launcher_light" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity> -->
+
+        <!-- Service: -->
+        <service
+            android:name=".service.IntentServiceUpdateQuote"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name=".service.IntentServiceUpdateQuote" />
+            </intent-filter>
+        </service>
+        
+        <service
+            android:name=".service.IntentServiceUpdateNews"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name=".service.IntentServiceUpdateNews" />
+            </intent-filter>
+        </service>
+
+        <!-- Service: (Widget) -->
+        <service
+            android:name=".widget.WidgetServiceWatchlist"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service
+            android:name=".widget.WidgetServicePortfolio"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service
+            android:name=".widget.WidgetServiceNews"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service
+            android:name=".widget.WidgetUpdateIntentService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name=".widget.WidgetUpdateIntentService" />
+            </intent-filter>
+        </service>
+
+        <!-- Receiver: -->
+        <receiver
+            android:name=".service.MyBootReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name=".service.MyBootReceiver" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.ReceiverQuoteAll"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name=".service.ReceiverQuoteAll" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.ReceiverNews"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name=".service.ReceiverNews" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.ReceiverUpdateNineCharts"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name=".service.ReceiverUpdateNineCharts" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.ReceiverUpdateSingleQuote"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name=".service.ReceiverUpdateSingleQuote" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Receiver: (Widget) -->
+        <receiver
+            android:name=".widget.WidgetProviderPortfolio"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/label_widget_portfolio" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_stuff_portfolio" />
+        </receiver>
+        <receiver
+            android:name=".widget.WidgetProviderWatchlist"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/label_widget_watchlist" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_stuff_watchlist" />
+        </receiver>
+        <!-- <receiver
+            android:name=".widget.WidgetProviderWatchlistNoHc"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/label_widget_watchlist_older" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_stuff_watchlist_no_hc" />
+        </receiver>
+        <receiver
+            android:name=".widget.WidgetProviderPortfolioNoHc"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/label_widget_portfolio_older" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_stuff_portfolio_no_hc" />
+        </receiver> -->
+        <receiver
+            android:name=".widget.WidgetProviderNews"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/label_widget_news" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_stuff_news" />
+        </receiver>
+       <!--  <receiver
+            android:name=".widget.WidgetProviderNewsNoHc"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/label_widget_news_older" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_stuff_news_no_hc" />
+        </receiver> -->
+        <receiver
+            android:name=".widget.WidgetReceiverQuoteUpdate"
+            android:exported="false"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name=".widget.WidgetReceiverQuoteUpdate" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".widget.WidgetReceiverNewsUpdate"
+            android:exported="false"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name=".widget.WidgetReceiverNewsUpdate" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

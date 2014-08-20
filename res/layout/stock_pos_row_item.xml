@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_row_item_bg"
+    android:minHeight="48.0dip"
+    android:orientation="horizontal">
+    
+    <TextView
+        android:id="@+id/stock_pos_first_col"
+        style="@style/stock_positions_card_tv_style"
+        android:layout_weight="1.3"
+        android:gravity="left"
+        android:maxLines="3"
+        android:text="@string/stock_pos_first_column" />
+    
+    <TextView
+        android:id="@+id/stock_pos_second_col"
+        style="@style/stock_positions_card_tv_style"
+        android:layout_weight="0.9"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textSize="13sp"
+        android:text="@string/stock_pos_second_column"/>
+    
+    <TextView
+        android:id="@+id/stock_pos_third_col"
+        style="@style/stock_positions_card_tv_style"
+        android:layout_weight="1.1"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textStyle="bold"
+        android:textSize="9sp"
+        android:text="@string/stock_pos_third_column" />
+
+    <TextView
+        android:id="@+id/stock_pos_fourth_col"
+        style="@style/stock_positions_card_tv_style"
+        android:layout_weight="1.2"
+        android:gravity="right"
+        android:maxLines="2"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:text="@string/stock_pos_fourth_column"/>
+
+</LinearLayout>
+	

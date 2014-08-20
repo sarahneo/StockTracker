@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/positions_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/summary_background_color"
+        android:minHeight="52.0dip"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp" >
+
+        <TextView
+            android:id="@+id/tv_portfolio_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:maxWidth="240dp"
+            android:paddingBottom="3.0dip"
+            android:paddingLeft="8.0dip"
+            android:text="@string/portfolio_value"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/tv_overall_gain_loss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_portfolio_value"
+            android:paddingLeft="8.0dip"
+            android:singleLine="true"
+            android:text="@string/overall_gain_loss" />
+
+        <TextView
+            android:id="@+id/portfolio_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/tv_portfolio_value"
+            android:gravity="right"
+            android:paddingRight="8.0dip"
+            android:singleLine="true"         
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="?attr/portfolio_value_color" />
+
+        <TextView
+            android:id="@+id/overall_gain_loss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_overall_gain_loss"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/portfolio_value"
+            android:paddingRight="8.0dip"
+            android:singleLine="true"
+            android:textColor="@color/green" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioBtn_grp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/positions_top_layout"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal" >
+
+        <org.holoeverywhere.widget.RadioButton
+            android:id="@+id/radio_daily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/daily_positions"
+            android:textSize="12sp" />
+
+        <org.holoeverywhere.widget.RadioButton
+            android:id="@+id/radio_overall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/overall_positions"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/btn_add_pos"
+            style="@style/transparent_bg_style"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/stock_positions"
+            android:padding="8dp"
+            android:scaleType="fitEnd"
+            android:src="?attr/add_icon" />
+    </RadioGroup>
+    
+    <ExpandableListView
+        android:id="@+id/cardsview_positions"
+        android:layout_below="@id/radioBtn_grp"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:groupIndicator="@null"
+        android:dividerHeight="0dp"
+        android:childDivider="@color/white"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+</RelativeLayout>

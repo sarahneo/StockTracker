@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	<LinearLayout 
+	    android:id="@+id/touch_for_total_value"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	    
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginTop="5dp"
+	        android:paddingTop="10dp"
+	        android:background="@color/white"
+	        android:textColor="@color/black"
+	        android:textSize="14sp"
+	        android:gravity="center"
+	        android:text="@string/distribution_chart_title"/>
+	    
+	    <TextView
+	        android:id="@+id/tv_date_today"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginLeft="5dp"
+	        android:paddingTop="6dp"
+	        android:background="@color/white"
+	        android:textColor="@color/black"
+	        android:textSize="12sp"
+	        android:gravity="center"
+	        android:text="@string/distribution_chart_title"/>
+	    
+	    <FrameLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@color/white"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginLeft="5dp"
+	        android:paddingTop="10dp"
+	        android:paddingBottom="20dp" >
+	
+	        <com.echo.holographlibrary.PieGraph
+	            android:id="@+id/piegraph"
+	            android:layout_width="match_parent"
+	            android:layout_height="@dimen/pie_graph_height" />
+	
+	        <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="@dimen/pie_graph_height"
+	            android:gravity="center" >
+	
+	            <TextView
+	                android:id="@+id/tv_label"
+	                android:layout_width="@dimen/pie_graph_tv_width"
+	                android:layout_height="wrap_content"
+	                android:layout_centerHorizontal="true"
+	                android:text="@string/title_total_value"
+	                android:textColor="@color/black"
+	                android:textSize="18sp"
+	                android:maxLines="2"
+	                android:ellipsize="end"
+	                android:gravity="center" />
+	
+	            <TextView
+	                android:id="@+id/tv_value"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@id/tv_label"
+	                android:textColor="@color/black"
+	                android:textSize="22sp"
+	                android:gravity="center"
+	                android:text="$35,343.90" />
+	            
+	            <org.holoeverywhere.widget.CheckBox
+	                android:id="@+id/check_incl_cash"
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:layout_below="@id/tv_value"
+	                android:layout_centerHorizontal="true"
+	                android:text="@string/include_cash"
+	                android:textColor="@color/black"
+	                android:textSize="12sp" />
+	            
+	        </RelativeLayout>
+	    </FrameLayout>
+	    
+	    <ImageView 
+	        android:layout_marginRight="5dp"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginBottom="5dp"
+	        style="@style/card.shadow_image"/>
+			    
+	    <TableLayout
+	        android:id="@+id/table_distribution"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginTop="5dp">
+	        
+		    <TableRow
+		        android:id="@+id/tr_distribution"
+		        android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@color/green">
+		        
+			    <TextView
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1.7"
+			        android:gravity="left"
+			        android:padding="4.0dip"
+			        android:text="@string/dist_card_column_1"
+			        android:textSize="12sp"
+			        android:textColor="@color/white" />
+			    
+			    <TextView
+			        android:id="@+id/card_title"
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1.3"
+			        android:gravity="center"
+			        android:padding="4.0dip"
+			        android:maxLines="1"
+			        android:text="@string/dist_card_column_2"
+			        android:textSize="12sp"
+			        android:textColor="@color/white" />
+			    
+			    <TextView
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1.3"
+			        android:gravity="center"
+			        android:padding="4.0dip"
+			        android:text="@string/dist_card_column_3"
+			        android:textSize="12sp"
+			        android:textColor="@color/white" />
+		    
+		    </TableRow>
+	
+	    </TableLayout>
+	    
+	    <ImageView 
+	        android:layout_marginRight="5dp"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginBottom="5dp"
+	        style="@style/card.shadow_image"/>
+	
+	    
+	</LinearLayout>
+</ScrollView>

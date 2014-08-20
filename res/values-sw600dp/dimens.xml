@@ -1,0 +1,16 @@
+<resources>
+
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    -->
+
+	<dimen name="pie_thickness">40dp</dimen>
+	<dimen name="pie_graph_height">300dp</dimen>
+	<dimen name="pie_graph_tv_width">150dp</dimen>
+	
+	<dimen name="find_stocks_dialog_height">450dp</dimen>
+	
+	<dimen name="nav_drawer_width">350dp</dimen>
+
+</resources>

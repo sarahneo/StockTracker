@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        
+	    <RadioGroup
+	        android:id="@+id/radioGrp_performance"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="left|center_vertical"
+	        android:layout_marginTop="3dp"
+	        android:orientation="horizontal" >
+	
+	        <org.holoeverywhere.widget.RadioButton
+	            android:id="@+id/radio_portfolio"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:ellipsize="end"
+	            android:maxLines="1"
+	            android:textSize="12sp"
+	            android:text="@string/indicator_portfolios"/>
+	
+	        <org.holoeverywhere.widget.RadioButton
+	            android:id="@+id/radio_stocks"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:ellipsize="end"
+	            android:maxLines="1"
+	            android:textSize="12sp"
+	            android:text="@string/radio_button_stocks" />
+	        
+	        <ImageButton
+		        android:id="@+id/btn_filter"
+		        android:layout_width="0dp"
+		        android:layout_height="50dp"
+		        android:layout_weight="1"
+		        android:scaleType="fitEnd"
+		        android:padding="8dp"
+		        style="@style/transparent_bg_style"
+		        android:src="?attr/search_icon"
+		        android:contentDescription="@string/stock_positions" />
+	        
+	        <ImageButton
+		        android:id="@+id/btn_sort_by"
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        style="@style/transparent_bg_style"
+		        android:src="?attr/sort_by_icon"
+		        android:contentDescription="@string/stock_positions" />
+	
+	    </RadioGroup>
+	    
+	    <LinearLayout
+	        android:id="@+id/layout_et_filter"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+	
+	        <EditText
+	            android:id="@+id/et_filter"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:padding="3dp"
+	            android:background="@drawable/apptheme_edit_text_holo_dark"
+	            android:minHeight="52.0dip"
+	            android:inputType="textCapCharacters"
+	            android:drawableLeft="?attr/search_icon"
+	            android:ems="10"
+	            android:hint="@string/keywords"
+	            android:textCursorDrawable="@null" />
+	        
+	        <ImageButton
+	            android:id="@+id/ib_close_keyboard"
+	            android:layout_width="52dp"
+	            android:layout_height="52dp"
+	            android:layout_weight="0"
+	            style="@style/transparent_bg_style"
+	            android:src="?attr/cancel_icon" />
+        
+        </LinearLayout>
+
+	    
+    </FrameLayout>
+    
+    <ListView
+        android:id="@+id/lv_performance"
+        android:groupIndicator="@null"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" 
+        android:layout_margin="6dp"
+        android:dividerHeight="5dp"
+        android:divider="@null"/> 
+
+</LinearLayout>
